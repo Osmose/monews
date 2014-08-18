@@ -28,7 +28,11 @@
 
     <div class="footer">
       <div class="container">
-        <p class="text-muted">{{ _('Created by humans like you!') }}</p>
+        <p class="text-muted">
+          {% trans repo_url='https://github.com/Osmose/monews' %}
+            Created by humans like you. Check out the <a href="{{ repo_url }}">Github repo</a> for MoNews.
+          {% endtrans %}
+        </p>
       </div>
     </div>
   </body>
