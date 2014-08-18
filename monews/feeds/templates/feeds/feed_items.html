@@ -1,10 +1,13 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
+  <h2>{{ feed.title }}</h2>
+  <p>{{ feed.description }}</p>
+
   {% for feed_item in feed_items %}
     <div class="feed-item">
       <h3><a href="{{ feed_item.link }}">{{ feed_item.title }}</a></h3>
-      {{ feed_item.bleached_readable_description|safe }}
+      {{ feed_item.readable_description }}
       <p><a href="{{ feed_item.link }}">{{ _('Original entry') }}</a></p>
     </div>
   {% endfor %}

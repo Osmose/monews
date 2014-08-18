@@ -19,6 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 INSTALLED_APPS = (
     # MoNews apps
     'monews.base',
+    'monews.feeds',
 
     # Third-party apps
     'south',
@@ -61,3 +62,27 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )
+
+
+# Project-specific Settings
+########################################################################
+
+ALLOWED_TAGS = [
+'a',
+'abbr',
+'acronym',
+'b',
+'blockquote',
+'code',
+'em',
+'i',
+'li',
+'ol',
+'strong',
+'ul',
+'div',
+'span',
+'img',
+'p',
+'br'
+]

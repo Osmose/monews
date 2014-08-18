@@ -1,0 +1,9 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+  <h2>{{ feed.title }}</h2>
+  <p>{{ feed.description }}</p>
+  <a href="{{ url('feeds.feed_items', feed.id) }}" class="btn btn-primary btn-lg">
+    {{ _('View items from this feed') }}
+  </a>
+{% endblock %}
